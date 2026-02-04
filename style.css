@@ -1,0 +1,125 @@
+/* Reset */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f9f9f9;
+  color: #1e1e1e;
+}
+
+header.header {
+  background-color: #0d6efd;
+  color: white;
+  padding: 1rem 2rem;
+  text-align: center;
+}
+
+/* Profile Layout */
+.profile-container {
+  display: grid;
+  grid-template-columns: 300px 1fr;
+  gap: 2rem;
+  padding: 2rem;
+}
+
+.summary-panel {
+  background-color: #fff;
+  border-radius: 12px;
+  padding: 1.5rem;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  position: sticky;
+  top: 2rem;
+  height: fit-content;
+}
+
+.profile-photo img {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  margin-bottom: 1rem;
+}
+
+.summary-panel h2 {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.summary-panel p {
+  font-size: 1rem;
+  margin-bottom: 1rem;
+}
+
+.key-skills h3,
+.contact-info h3 {
+  margin-top: 1rem;
+  margin-bottom: 0.5rem;
+  font-size: 1.1rem;
+  color: #0d6efd;
+}
+
+.key-skills ul,
+.contact-info p {
+  margin-left: 1rem;
+  list-style: disc;
+}
+
+.details-section {
+  background-color: #fff;
+  border-radius: 12px;
+  padding: 1.5rem;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  overflow-y: auto;
+  max-height: 80vh;
+}
+
+.details-section article {
+  margin-bottom: 2rem;
+}
+
+.details-section h2 {
+  font-size: 1.4rem;
+  margin-bottom: 0.5rem;
+  border-bottom: 2px solid #0d6efd;
+  display: inline-block;
+  padding-bottom: 4px;
+}
+
+.details-section h3 {
+  font-size: 1.1rem;
+  margin-bottom: 0.25rem;
+}
+
+.details-section ul {
+  margin-left: 1.5rem;
+  list-style: disc;
+  margin-bottom: 0.5rem;
+}
+
+/* Highlight critical info */
+.key-skills li,
+.experience li,
+.achievements li {
+  font-weight: 500;
+  color: #0d6efd;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .profile-container {
+    grid-template-columns: 1fr;
+  }
+
+  .summary-panel {
+    position: relative;
+    top: 0;
+    margin-bottom: 2rem;
+  }
+
+  .details-section {
+    max-height: none;
+  }
+}
